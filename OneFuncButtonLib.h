@@ -42,7 +42,7 @@ public:
 	unsigned int firstHoldTime; //Time it takes for a long-press event (PRESS_LONG_FIRST) to be triggered for the first time after pushing down the button
 	unsigned int subsqHoldTime; //Time it takes for a long-press event (PRESS_LONG_SUBSQ) to be triggered after it was already triggered in this down state
 
-	Button(int, bool = HIGH, unsigned int = 800, unsigned int = 200); //Class constructor
+	Button(int, bool = HIGH, bool = false, unsigned int = 800, unsigned int = 200); //Class constructor
 	byte state(); //The function, evaluates and returns the button state
 };
 
