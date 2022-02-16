@@ -10,7 +10,7 @@ This library is intended for simple projects which need a quick and easy way of 
 Button constructor receives one mandatory and three optional arguments.
 
 ```c++
-Button (pin [, activeState [, firstHoldTime [, subsqHoldTime]]]);
+Button (pin [, activeState [, internalPullup [, firstHoldTime [, subsqHoldTime]]]]);
 ```
 
 Examples:
@@ -18,7 +18,8 @@ Examples:
 ```c++
 Button button1(5);
 Button button2(6, LOW);
-Button button3(7, HIGH, 500, 300);
+Button button3(7, LOW, true, 500, 300);
+Button button3(7, HIGH, false, 500, 300);
 ```
 
 ### Arguments
