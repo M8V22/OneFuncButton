@@ -1,6 +1,6 @@
 #include "OneFuncButton.h"
 
-Button::Button(int _pin, bool _activeState = HIGH, bool _internalPullup = false, unsigned int _fht = 800, unsigned int _sht = 200)
+Button::Button(int _pin, bool _activeState, bool _internalPullup, unsigned int _fht, unsigned int _sht)
 {
 	pin = _pin;
 	activeState = _activeState;
