@@ -25,6 +25,7 @@ Button button3(7, HIGH, 500, 300);
 
 * **pin** - Arduino pin to which the button is connected
 * **activeState** - HIGH for for active-high, LOW for active-low (default: HIGH)
+* **internalPullup** - true if using the internal pullup resistor, requires **activeState** = LOW
 * **firstHoldTime** - time required to trigger the first HOLD event (default: 800 ms)
 * **subsqHoldTime** - time required to trigger all subsequent HOLD events after the first one (default: 200 ms)
 

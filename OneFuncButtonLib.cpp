@@ -1,12 +1,16 @@
 #include "OneFuncButtonLib.h"
 
-Button::Button(int _pin, bool _activeState = HIGH, unsigned int _fht = 800, unsigned int _sht = 200)
+Button::Button(int _pin, bool _activeState = HIGH, bool _internalPullup = false, unsigned int _fht = 800, unsigned int _sht = 200)
 {
 	pin = _pin;
 	activeState = _activeState;
 	firstHoldTime = _fht;
 	subsqHoldTime = _sht;
-	pinMode(_pin, INPUT);
+	if(_internalPullup == true) {
+		pinMode(_pin, INPUT_PULLUP);
+	} else {
+		pinMode(_pin, INPUT);
+	}
 
 	btnState = UP;
 	timeForNextChange = millis();
