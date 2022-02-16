@@ -19,7 +19,7 @@ Examples:
 Button button1(5);
 Button button2(6, LOW);
 Button button3(7, LOW, true, 500, 300);
-Button button3(7, HIGH, false, 500, 300);
+Button button4(8, HIGH, false, 500, 300);
 ```
 
 ### Arguments
