@@ -1,12 +1,15 @@
-#include "OneFuncButtonLib.h"
+#include <OneFuncButton.h>
 
 Button btn1(3); //Creating a button object (only the pin argument is mandatory)
 
 //We can also provide custom firstHoldTime and subsqHoldTime durations:
-//Button btn1(3, HIGH, 500, 300);
+//Button btn1(3, HIGH, false, 500, 300);
 
 //...or make the button active-low:
 //Button btn1(3, LOW);
+
+//...and enable the internal pullup resistor:
+//Button btn1(3, LOW, true);
 
 void setup() {
 	Serial.begin(9600);
